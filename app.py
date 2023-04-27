@@ -10,13 +10,13 @@ app = Flask(__name__)
 def get_price():
     price = Price.fetch_price()
     if price is not None:
-        return jsonify({'price': price})
+        return price
     else:
-        return jsonify({'error': "Could not fetch price"})
+        return "Coul not fetch the price"
 
 @app.route('/',methods= ['GET'])
 def home():
-    return jsonify({'error': 'Please use the "URL/price" to get the price'})
+    return 'Please use the "URL/price" to get the price'
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
