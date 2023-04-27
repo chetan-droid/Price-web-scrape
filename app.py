@@ -12,7 +12,7 @@ def get_price():
     if price is not None:
         return price
     else:
-        return "Coul not fetch the price"
+        return "Could not fetch the price"
 
 @app.route('/',methods= ['GET'])
 def home():
