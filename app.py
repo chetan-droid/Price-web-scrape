@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from src.service import Price
 
 
@@ -10,7 +10,7 @@ app = Flask(__name__)
 def get_price():
     price = Price.fetch_price()
     if price is not None:
-        return price
+        return render_template('index.html', price=price)
     else:
         return "Could not fetch the price"
 
@@ -19,4 +19,4 @@ def home():
     return 'Please use the "URL/price" to get the price'
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0')
+    app.run()
