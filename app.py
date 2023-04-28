@@ -19,4 +19,4 @@ def home():
     return 'Please use the "URL/price" to get the price'
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=False, host='0.0.0.0')
