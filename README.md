@@ -3,6 +3,8 @@
 
 This is a Flask app that scrapes the price of a lithium-ion battery from a website and returns it as a JSON response
 
+## Deployed application link
+- https://battery-price-scrape.netlify.app/price/
 
 ## Prerequisites
 
@@ -50,12 +52,19 @@ pip install -r requirements.txt
 python app.py
 ```
 
+### To build 
+
+```bash
+python build.py
+```
+
+
 ## API Reference
 
 #### GET the price of battery
 
 ```http
-  GET /price
+  GET /price/
 ```
 
 
